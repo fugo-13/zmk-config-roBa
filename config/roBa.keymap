@@ -34,6 +34,16 @@
         };
     };
 
+    behaviors {
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -44,8 +54,7 @@
 &kp Z      &kp X         &kp C         &kp V           &kp B        &none          &none          &kp N      &kp M  &mkp MB1  &mkp MB2  &mo 3
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 TAB      &kp BACKSPACE  &kp LCTRL                             &none
             >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>, <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         NUM {
@@ -55,6 +64,7 @@
 &kp ESCAPE  &kt LEFT      &kp DOWN      &kp RIGHT       &kp SLASH      &none          &none          &kp COMMA   &kp DOT  &kp LBKT   &kp RBKT   &mo 3
 &kp LCTRL   &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 SPACE    &lt 2 TAB      &kp BACKSPACE  &kp LSHIFT                                 &none
             >;
+            sensor-bindings = <&encoder_msc_down_up>, <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         SHIFT_NUM {
@@ -64,6 +74,7 @@
 &kp ESC     &kp HOME      &kp PAGE_DOWN  &kp END         &kp LS(SLASH)      &none          &none    &kp LS(COMMA)  &kp LS(DOT)  &kp LS(LBKT)   &kp LS(RBKT)   &mo 3
 &kp LCTRL   &kp LEFT_ALT  &kp LEFT_WIN   &kp LEFT_SHIFT  &lt 1 SPACE        &lt 2 TAB      &kp DEL  &kp LSHIFT                                                &none
             >;
+            sensor-bindings = <&encoder_msc_down_up>, <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         ARROW {
@@ -73,6 +84,7 @@
 &kp ESC    &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)   &kp LC(LG(RIGHT_ARROW))  &none        &none          &none    &none     &mkp MB5  &mkp MB1  &mkp MB2  &mo 3
 &kp LCTRL  &kp LEFT_ALT            &kp LEFT_WIN  &kp LEFT_SHIFT           &lt 1 SPACE  &lt 2 TAB      &kp DEL  &mkp MB4                                &none
             >;
+            sensor-bindings = <&encoder_msc_down_up>, <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
     };
 };
