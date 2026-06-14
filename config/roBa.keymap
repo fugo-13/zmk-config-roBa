@@ -45,7 +45,7 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 TAB      &kp BACKSPACE  &kp LCTRL                             &none
             >;
 
-            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>, <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
