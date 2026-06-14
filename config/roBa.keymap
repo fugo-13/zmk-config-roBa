@@ -13,29 +13,7 @@
 &trackball { scroll-layers = <3>; };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        BT0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <42 5>;
-        };
-
-        BT1 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <42 6>;
-        };
-
-        BT2 {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <7 42>;
-        };
-
-        BTreset {
-            bindings = <&bt BT_CLR>;
-            key-positions = <42 27 28>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         encoder_msc_down_up: encoder_msc_down_up {
@@ -56,7 +34,7 @@
 &kp Q      &kp W         &kp E         &kp R           &kp T                                      &kp Y      &kp U  &kp I     &kp O     &kp P
 &kp A      &kp S         &kp D         &kp F           &kp G        &none          &none          &kp H      &kp J  &kp K     &kp L     &kp ENTER
 &kp Z      &kp X         &kp C         &kp V           &kp B        &none          &none          &kp N      &kp M  &mkp MB1  &mkp MB2  &mo 3
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 TAB      &kp BACKSPACE  &kp LCTRL                             &none
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 TAB      &kp BACKSPACE  &kp LCTRL                             &mo 4
             >;
 
             sensor-bindings =
@@ -101,6 +79,15 @@
             sensor-bindings =
                 <&encoder_msc_down_up>,
                 <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR      &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans                                                  &mo 4
+            >;
         };
     };
 };
