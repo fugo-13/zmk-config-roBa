@@ -10,9 +10,7 @@
     quick-tap-ms = <0>;
 };
 
-&trackball {
-    scroll-layers = <3>;
-};
+&trackball { scroll-layers = <3>; };
 
 / {
     combos {
@@ -56,7 +54,9 @@
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 TAB      &kp BACKSPACE  &kp LCTRL                             &none
             >;
 
-            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>, <&inc_dec_kp UP_ARROW DOWN_ARROW>;
+            sensor-bindings =
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         NUM {
@@ -70,10 +70,10 @@
 
         SHIFT_NUM {
             bindings = <
-&kp LS(N1)  &kp LS(N2)    &kp LS(N3)     &kp LS(N4)      &kp LS(N5)                                 &kp LS(N6)     &kp LS(N7)   &kp LS(N8)     &kp LS(N9)     &kp LS(N0)
-&none       &none         &kp PAGE_DOWN  &kp LS(GRAVE)   &kp LS(BACKSLASH)  &none          &none    &kp LS(SEMI)   &kp LS(SQT)  &kp LS(MINUS)  &kp LS(EQUAL)  &kp ENTER
-&kp ESC     &kp HOME      &kp PAGE_DOWN  &kp END         &kp LS(SLASH)      &none          &none    &kp LS(COMMA)  &kp LS(DOT)  &kp LS(LBKT)   &kp LS(RBKT)   &mo 3
-&kp LCTRL   &kp LEFT_ALT  &kp LEFT_WIN   &kp LEFT_SHIFT  &lt 1 SPACE        &lt 2 TAB      &del     &kp LSHIFT                                                &none
+&kp LS(N1)  &kp LS(N2)    &kp LS(N3)     &kp LS(N4)      &kp LS(N5)                               &kp LS(N6)     &kp LS(N7)   &kp LS(N8)     &kp LS(N9)     &kp LS(N0)
+&none       &none         &kp PAGE_DOWN  &kp LS(GRAVE)   &kp LS(BACKSLASH)  &none          &none  &kp LS(SEMI)   &kp LS(SQT)  &kp LS(MINUS)  &kp LS(EQUAL)  &kp ENTER
+&kp ESC     &kp HOME      &kp PAGE_DOWN  &kp END         &kp LS(SLASH)      &none          &none  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(LBKT)   &kp LS(RBKT)   &mo 3
+&kp LCTRL   &kp LEFT_ALT  &kp LEFT_WIN   &kp LEFT_SHIFT  &lt 1 SPACE        &lt 2 TAB      &del   &kp LSHIFT                                                &none
             >;
         };
 
