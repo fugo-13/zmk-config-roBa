@@ -18,27 +18,22 @@
 
         BT0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <34 38 5>;
+            key-positions = <42 5>;
         };
 
         BT1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <34 38 6>;
+            key-positions = <42 6>;
         };
 
         BT2 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <34 38 7>;
+            key-positions = <7 42>;
         };
 
         BTreset {
             bindings = <&bt BT_CLR>;
-            key-positions = <34 38 42>;
-        };
-
-        BT3 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <34 38 8>;
+            key-positions = <42 27 28>;
         };
     };
 
